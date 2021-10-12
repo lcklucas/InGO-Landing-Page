@@ -1,7 +1,7 @@
 // MENU TOGGLE SHOW / HIDE
 const navToggle = document.getElementById('nav__toggle'),
       navMenu = document.getElementById('nav-menu'),
-      navClose = document.getElementById('menu-close-icon');
+      navClose = document.getElementById('close-menu-icon');
 
 if(navToggle){
     navToggle.addEventListener('click', () => {

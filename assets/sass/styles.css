@@ -149,7 +149,7 @@ body {
   padding: 0 3rem;
 }
 
-.nav .nav__menu {
+.nav__menu {
   position: relative;
 }
 
@@ -189,7 +189,7 @@ body {
 }
 
 /*CLASS SHOW-MENU*/
-.menu-show {
+.show-menu {
   right: 0;
 }
 
