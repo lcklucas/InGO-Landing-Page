@@ -7,7 +7,7 @@
     /*reseting rem value; 1rem = 10px*/
     font-size: 10px;
 
-    --header-height: 4rem;
+    --header-height: 5rem;
 
     /*colors*/
     --body-color: #FBFBFB;
@@ -16,7 +16,7 @@
     --green-color: #66EBB1;
     --pink-color: #FF7591;
     --yellow-color: #FFE668;
-
+    --red-color: #FF415E;
     /*font-size & tipography*/
     --main-font: 'Merriweather', serif;
     --second-font: 'Poppins', sans-serif;
@@ -61,8 +61,7 @@
         --bigger-font-size: 4rem;
         --big-font-size: 2.5rem;
         --normal-font-size: 2rem;
-        --small-font-size: 1rem;
-
+        --small-font-size: 1.4rem;
     }
 }
 
@@ -121,6 +120,7 @@ body{
 /*REUSABLE CLASSES*/
 .section{
     width: 100%;
+    max-width: 968px;
 }
 
 .section__title{
@@ -147,18 +147,34 @@ body{
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     padding: 0 3rem;
-
-    .nav__menu{
-        position: relative;
-    }
-
-    .nav__toggle i{
-        font-size: var(--big-font-size);
-    }
-
 }
+
+.nav__logo{
+    font-size: var(--big-font-size);
+    color: var(--red-color);
+}
+
+.nav__menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__item{
+    text-align: center;
+}
+
+.nav__link{
+    font-size: var(--normal-font-size);
+}
+
+.nav__toggle i{
+    font-size: var(--big-font-size);
+}
+
 /*NAV TOGGLE*/
 @media screen and (max-width: 899px){
     .nav__menu{
@@ -168,24 +184,34 @@ body{
         top: 0;
         right: -100%;
         transition: var(--img-transition);
-        background-color: var(--body-color)
+        background: rgba( 48, 43, 77, 0.35 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 10px );
+        -webkit-backdrop-filter: blur( 10px );
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        padding-bottom: 5rem; 
+
+            i{
+                font-size: var(--big-font-size);
+            }
     }
 }
 
 .nav__list{
     display: flex;
     flex-direction: column;
-    row-gap: 3rem;
+    row-gap: 4rem;
 }
+
 
 #close-menu-icon{
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: 3rem;
+    right: 3rem;
 }
 
 /*CLASS SHOW-MENU*/
-.menu-show{
+.show-menu{
     right: 0;
 }
 
@@ -201,6 +227,30 @@ body{
 }
 
 @media screen and (min-width: 900px){
+    .nav{
+        justify-content: flex-start;
+
+        i{
+            visibility: hidden;
+        }
+    }
+
+    .nav__menu{
+        margin-left: 3rem;
+    }
+
+    .nav__list{
+        flex-direction: row;
+        
+        li{
+            margin-left: 5rem;
+            
+            a{
+                font-size: var(--small-font-size);
+            }
+        }
+    }
+
 
 }
 
