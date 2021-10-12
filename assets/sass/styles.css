@@ -1,1 +1,138 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+/*FONT IMPORT*/
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap");
+/*ROOT*/
+:root {
+  /*reseting rem value; 1rem = 10px*/
+  font-size: 10px;
+  --header-height: 5rem;
+  /*colors*/
+  --body-color: #FBFBFB;
+  --text-color-1: #302B4D;
+  --text-color-2: #151515;
+  --green-color: #66EBB1;
+  --pink-color: #FF7591;
+  --yellow-color: #FFE668;
+  /*font-size & tipography*/
+  --main-font: 'Merriweather', serif;
+  --second-font: 'Poppins', sans-serif;
+  --biggest-font-size: 3.5rem;
+  --bigger-font-size: 3rem;
+  --big-font-size: 2rem;
+  --normal-font-size: 1.7rem;
+  --small-font-size: 1rem;
+  /*font-weight*/
+  --font-light: 300;
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  /*margin-bottom*/
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-25: 1.25rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+  /*z-index layer*/
+  --z-layer-1: -1;
+  --z-layer-2: 2;
+  --z-layer-3: 3;
+  --z-layer-4: 4;
+  /*hover overlay animation*/
+  --img-transition: .4s;
+  --img-hidden: hidden;
+  --img-scale: scale(1.1);
+}
+
+/*RESPONSIBLE FONNT-SIZE*/
+@media screen and (min-width: 900px) {
+  :root {
+    --biggest-font-size: 5.5rem;
+    --bigger-font-size: 4rem;
+    --big-font-size: 2.5rem;
+    --normal-font-size: 2rem;
+    --small-font-size: 1rem;
+  }
+}
+
+/*RESET AND BASE*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--text-color-1);
+  margin-bottom: var(--mb-2-5);
+  letter-spacing: 1.2rem;
+}
+
+h2 {
+  font-size: var(--big-font-size);
+  color: var(--text-color-1);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color-1);
+}
+
+b {
+  font-weight: var(--font-bold);
+}
+
+img, video {
+  max-width: 100%;
+}
+
+main {
+  width: 100%;
+}
+
+body {
+  background-color: var(--body-color);
+  width: 100vh;
+  font-family: var(--main-font);
+}
+
+/*REUSABLE CLASSES*/
+.section {
+  width: 100%;
+}
+
+.section__title {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.container {
+  max-width: 968px;
+  width: 100%;
+  padding: 2rem 3rem 0;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.ingo-logo-go {
+  color: var(--green-color);
+}
+
+/*BREAKPOINTS*/
+/*# sourceMappingURL=styles.css.map */
