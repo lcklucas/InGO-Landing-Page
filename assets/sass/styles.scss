@@ -1,5 +1,5 @@
 /*FONT IMPORT*/
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Poppins:wght@300;400;600&display=swap');
 
 /*ROOT*/
 :root{
@@ -20,17 +20,17 @@
     /*font-size & tipography*/
     --main-font: 'Merriweather', serif;
     --second-font: 'Poppins', sans-serif;
-    --biggest-font-size: 3.5rem;
+    --biggest-font-size: 4.2rem;
     --bigger-font-size: 3rem;
     --big-font-size: 2rem;
-    --normal-font-size: 1.7rem;
+    --normal-font-size: 1.3rem;
     --small-font-size: 1rem;
 
     /*font-weight*/
     --font-light: 300;
     --font-regular: 400;
     --font-semi-bold: 600;
-    --font-bold: 700;
+    --font-bold: 900;
 
     /*margin-bottom*/
     --mb-0-5: .5rem;
@@ -60,7 +60,7 @@
         --biggest-font-size: 5.5rem;
         --bigger-font-size: 4rem;
         --big-font-size: 2.5rem;
-        --normal-font-size: 2rem;
+        --normal-font-size: 1.6rem;
         --small-font-size: 1.4rem;
     }
 }
@@ -82,7 +82,6 @@ h1{
     font-weight: var(--font-semi-bold);
     color: var(--text-color-1);
     margin-bottom: var(--mb-2-5);
-    letter-spacing: 1.2rem;
 }
 
 h2{
@@ -99,12 +98,23 @@ a{
     color: var(--text-color-1);
 }
 
+p{
+    color: var(--text-color-1);
+}
+
 b{
     font-weight: var(--font-bold);
 }
 
 img, video{
     max-width: 100%;
+    height: 100%;
+}
+
+button, input{
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
 
 main{
@@ -121,6 +131,7 @@ body{
 .section{
     width: 100%;
     max-width: 968px;
+    margin: 0 auto;
 }
 
 .section__title{
@@ -144,11 +155,15 @@ body{
 
 /*HEADER*/
 .nav{
+    width: 100%;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 3rem;
+    background: transparent;
+    z-index: var(--z-layer-4);
+    position: fixed;
 }
 
 .nav__logo{
@@ -215,6 +230,102 @@ body{
     right: 0;
 }
 
+/*HOME PAGE*/
+.home__section{
+    height: 100vh;
+}
+
+.home__container{
+    height: 100%;
+    padding: 0 0 5rem 3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.home__data{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.home__text{
+    width: 400px;
+    height: max-content;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    z-index: var(--z-layer-3);
+
+    h1{
+        letter-spacing: .8rem;
+    }
+
+    p{
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-regular);
+        line-height: 2rem;
+    }
+}
+
+.home__img-selector{
+    width: max-content;
+    z-index: var(--z-layer-3);
+    display: flex;
+
+    button{
+        width: 65px;
+        height: 60px;
+        i{
+            font-size: var(--big-font-size);
+        }
+    }
+}
+
+#img__change-left{
+    background: var(--green-color);
+}
+
+.home__social{
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    font-size: var(--normal-font-size);
+}
+
+.home__img{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    align-self: flex-start;
+    z-index: var(--z-layer-2);
+    overflow: var(--img-hidden);
+   
+    img{
+        object-fit: cover;
+        float: right;
+        filter: contrast(.8);
+    }  
+}
+
+#img__display{
+    position: absolute;
+    bottom: 2rem;
+    right: 3rem;
+    font-size: var(--biggest-font-size);
+    color: var(--body-color);
+    z-index: var(--z-layer-3);
+}
+
+
 
 
 /*BREAKPOINTS*/
@@ -250,6 +361,15 @@ body{
             }
         }
     }
+
+    .home__data{
+        margin-left: 7rem;
+    }
+
+    .home__text{
+        width: 700px;
+    }
+
 
 
 }
