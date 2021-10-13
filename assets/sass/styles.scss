@@ -17,6 +17,7 @@
     --pink-color: #FF7591;
     --yellow-color: #FFE668;
     --red-color: #FF415E;
+    --gray-color: #292927;
     /*font-size & tipography*/
     --main-font: 'Merriweather', serif;
     --second-font: 'Poppins', sans-serif;
@@ -138,7 +139,7 @@ body{
     font-size: var(--bigger-font-size);
     text-align: center;
     text-transform: capitalize;
-    margin-bottom: var(--mb-3);
+    margin-bottom: 5rem;
 }
 
 .container{
@@ -410,9 +411,6 @@ body{
     }
 }
 
-
-
-
 .adventure__card__img{
     overflow: var(--img-hidden);
 
@@ -421,6 +419,132 @@ body{
         width: 220px;
         object-fit: cover;
     }
+}
+
+/*PLACES SECTION*/
+.places__section{
+    height: 100vh;
+    padding: 0 5rem;
+}
+
+.places__container{
+    max-width: 800px;
+    margin: 0 auto;
+    height: 68%;
+    position: relative;
+    display: flex;
+}
+
+.pink-color{
+    color: var(--pink-color);
+    background-color: var(--pink-color);
+}
+
+.green-color{
+    color: green;
+    background-color: var(--green-color);
+}
+
+.yellow-color{
+    color: var(--yellow-color);
+}
+
+.places__layer{
+    width: 200px;
+    height: 200px;
+    z-index: var(--z-layer-1);
+    position: absolute;
+    right: 5%;
+    top: 30px;
+}
+
+.places__video{
+    width: 80%;
+    height: 350px;
+    position: relative;;
+    top: 0;
+    left: 0;
+    z-index: var(--z-layer-2);
+
+    i{
+        background: transparent;
+        font-size: var(--biggest-font-size);
+        position: absolute;
+        top: 45%;
+        left: 45%;
+    }
+
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.places__data{
+    width: 210px;
+    height: 300px;
+    background-color: var(--gray-color);
+    z-index: var(--z-layer-3);
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    position: absolute;
+    bottom: 7px;
+    right: 0;
+    
+    h2, p{
+        color: var(--body-color);
+        opacity: .8;
+        margin-bottom: var(--mb-1-25);
+    }
+
+    p{
+        font-weight: var(--font-light);
+        margin-bottom: var(--mb-3);
+    }
+
+    h3{
+        background-color: transparent;
+        margin-bottom: var(--mb-3);
+    }
+
+    a{
+        background-color: transparent;
+    }
+}
+
+.places__data h3, h2, p, a{
+    padding: 0 5rem 0 3rem; 
+}
+
+
+.places__changer{
+   width: 100%;
+   position: absolute;
+   bottom: 0;
+   padding: 0; 
+   display: flex;
+   flex-direction: row; 
+
+   button{
+       background-color: var(--gray-color);
+       filter: brightness(1.1);
+
+       &:hover{
+           filter: brightness(1.6);
+       }
+   }
+
+   i{
+       font-size: var(--big-font-size);
+        background: transparent;
+   }
+}
+
+#place-changer-left,
+#place-changer-right{
+    width: 50%;
+    height: 40px;
 }
 
 
