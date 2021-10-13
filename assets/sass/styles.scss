@@ -135,8 +135,10 @@ body{
 }
 
 .section__title{
+    font-size: var(--bigger-font-size);
     text-align: center;
     text-transform: capitalize;
+    margin-bottom: var(--mb-3);
 }
 
 .container{
@@ -325,6 +327,101 @@ body{
     z-index: var(--z-layer-3);
 }
 
+/*FIND YOURSELF*/
+.find__section{
+    padding: 3rem 0;
+}
+
+.find__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 3rem;
+}
+.adventure__card{
+    max-width: 200px;
+    height: max-content;
+    margin-right: 3rem;
+    border-left: 1.3px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    a{
+        text-decoration: underline;
+        font-weight: var(--font-semi-bold);
+        margin-left: 1rem;
+    }
+
+    p{
+        padding: 0 2rem 0 1rem;
+    }
+}
+
+#adventure-card-1{
+    margin: 6rem 3rem 0 0;
+    .adventure__card__title{
+        background: var(--pink-color);
+        opacity: .6;
+
+    }
+    a{
+        color: var(--pink-color);
+    }
+    
+}
+
+#adventure-card-2{
+    .adventure__card__title{
+        background-color: var(--yellow-color);
+        opacity: .6;
+    }
+    a{
+        color: var(--yellow-color);
+    }
+}
+
+#adventure-card-3{
+    margin: 12rem 0 0 0;
+    .adventure__card__title{
+        background: var(--green-color);
+        opacity: .6;
+        h2{
+            right: -40px;
+        }
+    }
+    a{
+        color: var(--green-color);
+    }
+}
+
+.adventure__card__title{
+    width: 50px;
+    height: 25px;
+    position: relative;
+    h2{
+        font-size: var(--normal-font-size);
+        position: absolute;
+        top: -10px;
+        right: -15px;
+        font-weight: var(--font-semi-bold);
+        color: black;
+        opacity: 1;
+    }
+}
+
+
+
+
+.adventure__card__img{
+    overflow: var(--img-hidden);
+
+    img{
+        height: 260px;
+        width: 220px;
+        object-fit: cover;
+    }
+}
 
 
 
