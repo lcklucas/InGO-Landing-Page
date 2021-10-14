@@ -916,12 +916,104 @@ body {
 
 /*BREAKPOINTS*/
 @media screen and (max-width: 599px) {
+  :root {
+    --biggest-font-size: 3.8rem;
+    --bigger-font-size: 3.3rem;
+    --big-font-size: 2.1rem;
+    --normal-font-size: 1.4rem;
+    --small-font-size: 1.1rem;
+  }
+  .home__container {
+    padding: 0 0 5rem 1rem;
+  }
   .home__data {
     width: 25%;
+  }
+  .home__text {
+    width: 300px;
+    text-shadow: 2px 1px rgba(54, 54, 54, 0.3);
+  }
+  .home__text p {
+    visibility: hidden;
+  }
+  .home__img-selector {
+    visibility: hidden;
   }
   .home__img {
     width: 75%;
     float: right;
+  }
+  .home__img img {
+    -webkit-filter: contrast(0.8);
+            filter: contrast(0.8);
+  }
+  .find__section h1 {
+    margin-bottom: var(--mb-1);
+  }
+  .find__container {
+    padding: 0 1rem;
+    row-gap: 8rem;
+  }
+  #adventure-card-3 {
+    margin: 0 30px 3rem 0;
+  }
+  .places__section {
+    padding: 0 1rem;
+  }
+  .places__data {
+    width: 180px;
+  }
+  .places__video i {
+    left: 35%;
+  }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 3rem;
+  }
+  .footer__logo {
+    width: 50%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .nav__footer {
+    width: 50%;
+  }
+  #footer-about {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  #footer-home {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  #footer-company {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+    margin-left: 50%;
+  }
+  #footer-social {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 2rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
