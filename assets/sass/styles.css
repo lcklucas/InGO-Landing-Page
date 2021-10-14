@@ -153,6 +153,11 @@ body {
 }
 
 /*HEADER*/
+.header {
+  max-width: 968px;
+  margin: 0 auto;
+}
+
 .nav {
   width: 100%;
   height: var(--header-height);
@@ -924,7 +929,7 @@ body {
     --small-font-size: 1.1rem;
   }
   .home__container {
-    padding: 0 0 5rem 1rem;
+    padding: 0 0 5rem 2rem;
   }
   .home__data {
     width: 25%;
@@ -951,20 +956,32 @@ body {
     margin-bottom: var(--mb-1);
   }
   .find__container {
-    padding: 0 1rem;
+    padding: 0 3rem;
     row-gap: 8rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .adventure__card {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin-right: 0;
   }
   #adventure-card-3 {
     margin: 0 30px 3rem 0;
   }
   .places__section {
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
   .places__data {
     width: 180px;
   }
   .places__video i {
-    left: 35%;
+    visibility: hidden;
   }
   .footer {
     display: -webkit-box;
@@ -1014,6 +1031,16 @@ body {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .find__container {
+    padding: 2rem 1rem;
+  }
+  .adventure__card {
+    width: 170px;
+    margin-left: 10px;
   }
 }
 

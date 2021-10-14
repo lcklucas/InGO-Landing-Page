@@ -160,6 +160,10 @@ body{
 }
 
 /*HEADER*/
+ .header{
+     max-width: 968px;
+     margin: 0 auto;
+ }
 .nav{
     width: 100%;
     height: var(--header-height);
@@ -803,7 +807,7 @@ body{
     }
 
     .home__container{
-        padding: 0 0 5rem 1rem;
+        padding: 0 0 5rem 2rem;
     }
 
     .home__data{
@@ -837,8 +841,16 @@ body{
     }
 
     .find__container{
-        padding: 0 1rem;
+        padding: 0 3rem;
         row-gap: 8rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .adventure__card{
+        justify-self: center;
+        margin-right: 0;
     }
 
     #adventure-card-3{
@@ -846,7 +858,7 @@ body{
     }
 
     .places__section{
-        padding: 0 1rem;
+        padding: 0 2rem;
     }
 
     .places__data{
@@ -855,7 +867,7 @@ body{
 
     .places__video {
         i{
-            left: 35%;
+            visibility: hidden;
         }
     }
 
@@ -895,6 +907,14 @@ body{
 }
 
 @media screen and (min-width: 600px){
+    .find__container{
+        padding: 2rem 1rem;
+    }
+
+    .adventure__card{
+        width: 170px;
+        margin-left: 10px;
+    }
 
 }
 
