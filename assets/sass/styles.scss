@@ -492,13 +492,15 @@ body{
     bottom: 7px;
     right: 0;
     
-    h2, p{
+    h2{
         color: var(--body-color);
         opacity: .8;
         margin-bottom: var(--mb-1-25);
     }
 
     p{
+        color: var(--body-color);
+        opacity: .8;
         font-weight: var(--font-light);
         margin-bottom: var(--mb-3);
     }
@@ -513,8 +515,10 @@ body{
     }
 }
 
-.places__data h3, h2, p, a{
+.places__data {
+    h3, h2, p, a{
     padding: 0 5rem 0 3rem; 
+    }
 }
 
 

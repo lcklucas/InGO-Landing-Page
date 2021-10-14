@@ -557,13 +557,15 @@ body {
   right: 0;
 }
 
-.places__data h2, .places__data p {
+.places__data h2 {
   color: var(--body-color);
   opacity: .8;
   margin-bottom: var(--mb-1-25);
 }
 
 .places__data p {
+  color: var(--body-color);
+  opacity: .8;
   font-weight: var(--font-light);
   margin-bottom: var(--mb-3);
 }
@@ -577,7 +579,7 @@ body {
   background-color: transparent;
 }
 
-.places__data h3, h2, p, a {
+.places__data h3, .places__data h2, .places__data p, .places__data a {
   padding: 0 5rem 0 3rem;
 }
 
