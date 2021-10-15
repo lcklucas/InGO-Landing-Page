@@ -127,32 +127,4 @@ const playVideo = document.getElementById('play-button'),
       backgroundLayer = document.getElementById('palce-color-layer'),
       placeDate = document.getElementById('place__date'),
       readMore = document.getElementById('place-link');
-      let filadaputa = 0;
-     let nextPlace = document.getElementById('place-changer-right');
-     let previousPlace = document.getElementById('place-changer-left');
       
-
-
-
-previousPlace.addEventListener('click', () =>{
-    current--
-    changeColors()
-
-})
-
-nextPlace.addEventListener('click', () =>{
-    filadaputa++
-})
-
-
-function changeColors(){
-    switch(current){
-
-        case 2 :
-            playVideo.classList.remove('pink-color')
-            playVideo.classList.add('green-color')
-            break;
-    }
-}
-
-console.log(filadaputa)
