@@ -57,14 +57,14 @@
 
                 <div class="home__data">
                     <div class="home__text">
-                        <h1><b>Discover</b> your adventure</h1>
+                        <h1 id="home-page-title"><b>Discover</b> your adventure</h1>
                         <p>We believe adventure has no bounds, no definition. <br>
                             It´s a frame of mind, a spirit, a choice.
                         </p>
                     </div>
 
                     <div class="home__img-selector">
-                        <button id="img__change-left">
+                        <button class="green-color" id="img__change-left">
                             <i class="ri-arrow-left-line"></i>
                         </button>
                         <button id="img__change-right">
@@ -80,9 +80,14 @@
                 </div>
               
 
-                <div class="home__img">
-                    <img src="assets/img/climbing.jpg" alt="">
-                    <span id="img__display">01</span>
+                <div class="home__img" id="home-images">
+                    <div class="home__img-container">
+                        <img id="default-img" class="home__image" src="assets/img/climbing.jpg" alt="">
+                        <img id="surfing-img" class="home__image" src="assets/img/surfing.jpg" alt="">
+                        <img id="skydiving-img" class="home__image" src="assets/img/skydiving.jpg" alt="">
+                        <span id="img__display">01</span>
+                    </div>
+                    
                 </div>
 
             </div>
@@ -136,7 +141,7 @@
                     </div>
 
                     <div class="adventure__card__img">
-                        <img src="assets/img/skidiving.jpg" alt="">
+                        <img src="assets/img/skydiving.jpg" alt="">
                     </div>
                     
 
@@ -174,11 +179,11 @@
                     <a class="pink-color" id="place-link" href="">Read more...</a>
 
                     <div class="places__changer">
-                        <button id="place-changer-left" onclick="changeColors()">
+                        <button id="place-changer-left">
                             <i class="ri-arrow-left-line pink-color" id="button-left"></i>
                         </button>
 
-                        <button id="place-changer-right" onclick="changeColors()">
+                        <button id="place-changer-right">
                             <i class="ri-arrow-right-line pink-color" id="button-right"></i>
                         </button>
                     </div>
@@ -272,7 +277,77 @@
         </section>
 
     </main>
-    
+
+    <footer class="footer section">
+        <a href="" class="footer__logo">In<b class="ingo-logo-go">Go</b></a>
+
+        <ul class="nav__footer" id="footer-about">
+            <li class="footer__title">
+                <a href="" class="">About</a>
+            </li>
+            <li class="footer__item">
+                <a href="" class="footer__link">About</a>
+            </li>
+            <li class="footer__item">
+                <a href="" class="footer__link">Help</a>
+            </li>
+            <li class="footer__item">
+                <a href="" class="footer__link">Contact</a>
+            </li>
+            <li class="footer__item">
+                <a href="" class="footer__link">Carrers</a>
+            </li>
+        </ul>
+
+        <ul class="nav__footer" id="footer-company">
+            <li class="footer__title">
+                <a href="" class="">Company</a>
+            </li>
+            
+            <li class="footer__item">
+                <a href="" class="footer__link">Testimonials</a>
+            </li>
+            <li class="footer__item">
+                <a href="" class="footer__link">Brand</a>
+            </li>
+            <li class="footer__item">
+                <a href="" class="footer__link">Advertise</a>
+            </li>
+            <li class="footer__item">
+                <a href="" class="footer__link">API</a>
+            </li>
+            <li class="footer__item">
+                <a href="" class="footer__link">Integrations</a>
+            </li>
+        </ul>
+
+        <ul class="nav__footer" id="footer-home">
+            <li class="footer__title">
+                <a href="" class="">Home</a>
+            </li>
+            <li class="footer__item">
+                <a href="" class="footer__link">About</a>
+            </li>
+            <li class="footer__item">
+                <a href="" class="footer__link">Help</a>
+            </li>
+            <li class="footer__item">
+                <a href="" class="footer__link">Contact</a>
+            </li>
+            <li class="footer__item">
+                <a href="" class="footer__link">Carrers</a>
+            </li>
+        </ul>
+
+        <ul class="nav__footer" id="footer-social">
+            <li><i class="ri-instagram-line"></i></li>
+            <li><i class="ri-twitter-fill"></i></li>
+            <li><i class="ri-linkedin-box-fill"></i></li> 
+        </ul>
+    </footer>
+
+    <!--SCROLL REVEAL-->
+    <script src="assets/js/scrollreveal.min.js"></script>
     <!--MAIN JS-->
     <script src="assets/js/main.js"></script>
 </body>
