@@ -226,7 +226,12 @@ body {
     padding-bottom: 5rem;
   }
   .nav__menu i {
+    font-size: var(--bigger-font-size);
+    color: var(--body-color);
+  }
+  .nav__link {
     font-size: var(--big-font-size);
+    color: var(--body-color);
   }
 }
 
@@ -255,6 +260,7 @@ body {
 /*HOME PAGE*/
 .home__section {
   height: 100vh;
+  max-width: 1024px;
 }
 
 .home__container {
@@ -330,7 +336,9 @@ body {
 }
 
 #img__change-left {
-  background: var(--green-color);
+  color: var(--text-color-2);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .home__social {
@@ -349,7 +357,7 @@ body {
 }
 
 .home__img {
-  width: 50%;
+  width: 80%;
   height: 100%;
   position: relative;
   -ms-flex-item-align: start;
@@ -358,7 +366,18 @@ body {
   overflow: var(--img-hidden);
 }
 
-.home__img img {
+.home__img-container {
+  max-width: 580px;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: var(--img-hidden);
+}
+
+.home__img-container img {
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   float: right;
@@ -368,12 +387,6 @@ body {
   height: auto;
   -webkit-transition: 1s;
   transition: 1s;
-}
-
-.home__img-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 #img__display {
@@ -497,18 +510,18 @@ body {
 
 /*PLACES SECTION*/
 .places__section {
-  height: 100vh;
+  margin-bottom: 5rem;
   padding: 0 5rem;
 }
 
 .places__container {
   max-width: 800px;
   margin: 0 auto;
-  height: 68%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-bottom: 8rem;
 }
 
 .pink-color {
@@ -517,12 +530,13 @@ body {
 }
 
 .green-color {
-  color: green;
+  color: var(--green-color);
   background-color: var(--green-color);
 }
 
 .yellow-color {
   color: var(--yellow-color);
+  background-color: var(--yellow-color);
 }
 
 .places__layer {
@@ -571,8 +585,8 @@ body {
           flex-direction: column;
   padding-top: 3rem;
   position: absolute;
-  bottom: 7px;
   right: 0;
+  top: 13 0px;
 }
 
 .places__data h2 {
@@ -946,8 +960,9 @@ body {
     width: 25%;
   }
   .home__text {
-    width: 300px;
+    max-width: 300px;
     text-shadow: 2px 1px rgba(54, 54, 54, 0.3);
+    padding: 0 2rem;
   }
   .home__text p {
     visibility: hidden;
@@ -1064,9 +1079,6 @@ body {
   .nav i {
     visibility: hidden;
   }
-  .nav__menu {
-    margin-left: 3rem;
-  }
   .nav__list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1077,13 +1089,19 @@ body {
     margin-left: 5rem;
   }
   .nav__list li a {
-    font-size: var(--small-font-size);
+    font-size: var(--normal-font-size);
+  }
+  .home__img {
+    width: 80%;
   }
   .home__data {
     margin-left: 7rem;
   }
   .home__text {
     width: 650px;
+  }
+  .adventure__card {
+    width: 250px;
   }
   .app__data__screen ul {
     padding-top: 0;

@@ -30,12 +30,14 @@ let homeTitle = document.getElementById('home-page-title');
 previous.addEventListener('click', () => {
     atual--
     changeImage()
+    changeText()
     changing = false
 })
 
 next.addEventListener('click', () =>{
     atual++
     changeImage()
+    changeText()
     changing = false
 })
 
@@ -48,7 +50,6 @@ function changeImage(){
         atual = quant.length-1
     }
     imagem.style.marginLeft = -100*atual+'%' 
-    console.log(atual)
 }
 
 function changeText(){
@@ -56,6 +57,7 @@ function changeText(){
 
         case 0 :
             homeTitle.innerHTML="<b>Discover</b> your adventure"
+            imagePosition.innerHTML="01"
             break;
         case 1 :
             homeTitle.innerHTML="<b>Surf</b> your best wave"
@@ -69,14 +71,88 @@ function changeText(){
     }
 }
 
+function changeButtonColor(){
+    switch(atual){
+
+        case 0 :
+            previous.classList.remove('pink-color');
+            previous.classList.add('green-color');
+            break;
+            
+        case 1 : 
+            previous.classList.add('yellow-color');
+            break;
+
+        case 2 :
+            previous.classList.remove('yellow-color');
+            previous.classList.remove('green-color');
+            previous.classList.add('pink-color');
+            break;
+    }
+}
+
 setInterval(() =>{
     if(changing){
     atual++ 
     changeImage()
     changeText()
+    changeButtonColor()
+    sr.reveal()
     }
     else{
         changing = true
     }
-}, 4000)
+}, 3000)
 
+
+// SCROLL REVEAL ANIMATIONS
+const sr = ScrollReveal({
+    distance: '200px',
+    duration: 2800,
+    reset: true,
+})
+
+sr.reveal(`.adventure__card`, {
+    origin: 'bottom',
+    interval: 100,
+})
+
+sr.reveal(`#home-page-title`,{
+    origin: 'left',
+    interval: 30,
+})
+
+// CHANGE PLACES SECTION COLORS
+const playVideo = document.getElementById('play-button'),
+      backgroundLayer = document.getElementById('palce-color-layer'),
+      placeDate = document.getElementById('place__date'),
+      readMore = document.getElementById('place-link');
+      let filadaputa = 0;
+     let nextPlace = document.getElementById('place-changer-right');
+     let previousPlace = document.getElementById('place-changer-left');
+      
+
+
+
+previousPlace.addEventListener('click', () =>{
+    current--
+    changeColors()
+
+})
+
+nextPlace.addEventListener('click', () =>{
+    filadaputa++
+})
+
+
+function changeColors(){
+    switch(current){
+
+        case 2 :
+            playVideo.classList.remove('pink-color')
+            playVideo.classList.add('green-color')
+            break;
+    }
+}
+
+console.log(filadaputa)
