@@ -57,7 +57,7 @@
 
                 <div class="home__data">
                     <div class="home__text">
-                        <h1><b>Discover</b> your adventure</h1>
+                        <h1 id="home-page-title"><b>Discover</b> your adventure</h1>
                         <p>We believe adventure has no bounds, no definition. <br>
                             It´s a frame of mind, a spirit, a choice.
                         </p>
@@ -80,8 +80,12 @@
                 </div>
               
 
-                <div class="home__img">
-                    <img src="assets/img/climbing.jpg" alt="">
+                <div class="home__img" id="home-images">
+                    <div class="home__img-container">
+                        <img id="default-img" class="home__image" src="assets/img/climbing.jpg" alt="">
+                        <img id="surfing-img" class="home__image" src="assets/img/surfing.jpg" alt="">
+                        <img id="skydiving-img" class="home__image" src="assets/img/skydiving.jpg" alt="">
+                    </div>
                     <span id="img__display">01</span>
                 </div>
 
@@ -136,7 +140,7 @@
                     </div>
 
                     <div class="adventure__card__img">
-                        <img src="assets/img/skidiving.jpg" alt="">
+                        <img src="assets/img/skydiving.jpg" alt="">
                     </div>
                     
 
@@ -174,11 +178,11 @@
                     <a class="pink-color" id="place-link" href="">Read more...</a>
 
                     <div class="places__changer">
-                        <button id="place-changer-left" onclick="changeColors()">
+                        <button id="place-changer-left">
                             <i class="ri-arrow-left-line pink-color" id="button-left"></i>
                         </button>
 
-                        <button id="place-changer-right" onclick="changeColors()">
+                        <button id="place-changer-right">
                             <i class="ri-arrow-right-line pink-color" id="button-right"></i>
                         </button>
                     </div>

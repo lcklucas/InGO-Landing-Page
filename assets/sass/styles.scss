@@ -81,7 +81,7 @@ html{
 
 h1{
     font-size: var(--biggest-font-size);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--font-regular);
     color: var(--text-color-1);
     margin-bottom: var(--mb-2-5);
 }
@@ -140,6 +140,7 @@ body{
 
 .section__title{
     font-size: var(--bigger-font-size);
+    font-weight: var(--font-bold);
     text-align: center;
     text-transform: capitalize;
     margin-bottom: 5rem;
@@ -315,7 +316,7 @@ body{
     width: 50%;
     height: 100%;
     position: relative;
-    align-self: flex-start;
+    align-self: flex-start; 
     z-index: var(--z-layer-2);
     overflow: var(--img-hidden);
    
@@ -323,7 +324,14 @@ body{
         object-fit: cover;
         float: right;
         filter: contrast(.8);
+        display: inline;
+        height: auto;
+        transition: 1s;
     }  
+}
+
+.home__img-container{
+    display: flex;
 }
 
 #img__display{
@@ -948,7 +956,7 @@ body{
     }
 
     .home__text{
-        width: 700px;
+        width: 650px;
     }
 
     .app__data__screen{
