@@ -32,14 +32,14 @@ previous.addEventListener('click', () => {
     changeImage()
     changeText()
     changing = false
-})
+});
 
 next.addEventListener('click', () =>{
     atual++
     changeImage()
     changeText()
     changing = false
-})
+});
 
 function changeImage(){
     if(atual >= quant.length){
@@ -50,7 +50,7 @@ function changeImage(){
         atual = quant.length-1
     }
     imagem.style.marginLeft = -100*atual+'%' 
-}
+};
 
 function changeText(){
     switch(atual){
@@ -69,7 +69,7 @@ function changeText(){
             imagePosition.innerHTML="03"
             break;
     }
-}
+};
 
 function changeButtonColor(){
     switch(atual){
@@ -89,7 +89,7 @@ function changeButtonColor(){
             previous.classList.add('pink-color');
             break;
     }
-}
+};
 
 setInterval(() =>{
     if(changing){
@@ -102,7 +102,7 @@ setInterval(() =>{
     else{
         changing = true
     }
-}, 3000)
+}, 3000);
 
 
 // SCROLL REVEAL ANIMATIONS
@@ -110,21 +110,102 @@ const sr = ScrollReveal({
     distance: '200px',
     duration: 2800,
     reset: true,
-})
+});
 
 sr.reveal(`.adventure__card`, {
     origin: 'bottom',
     interval: 100,
-})
+});
 
 sr.reveal(`#home-page-title`,{
     origin: 'left',
     interval: 30,
-})
+});
 
 // CHANGE PLACES SECTION COLORS
+let tema = 0;
 const playVideo = document.getElementById('play-button'),
-      backgroundLayer = document.getElementById('palce-color-layer'),
+      backgroundLayer = document.getElementById('place-color-layer'),
       placeDate = document.getElementById('place__date'),
-      readMore = document.getElementById('place-link');
-      
+      readMore = document.getElementById('place-link'),
+      previousPlace = document.getElementById('place-changer-left'),
+      nextPlace = document.getElementById('place-changer-right'),
+      arrowLeft = document.getElementById('button-left'),
+      arrowRight = document.getElementById('button-right'),
+      placeImage = document.getElementById('place-img'),
+      placeLocation = document.getElementById('place__location');
+
+previousPlace.addEventListener('click', ()=>{
+    tema--;
+    changeTheme();
+    console.log(tema);
+})
+
+
+nextPlace.addEventListener('click', ()=>{
+    tema++;
+    changeTheme()
+    console.log(tema);
+})
+
+
+function changeTheme(){
+    if(tema < 0){
+        tema = 2;
+    } else if(tema >=3){
+        tema = 0;
+    }
+
+    switch(tema){
+
+        case 0:
+            backgroundLayer.classList.remove('green-color');
+            playVideo.classList.remove('green-color');
+            placeDate.classList.remove('green-color');
+            readMore.classList.remove('green-color');
+            arrowLeft.classList.remove('green-color');
+            arrowRight.classList.remove('green-color');
+
+            backgroundLayer.classList.remove('yellow-color');
+            playVideo.classList.remove('yellow-color');
+            placeDate.classList.remove('yellow-color');
+            readMore.classList.remove('yellow-color');
+            arrowLeft.classList.remove('yellow-color');
+            arrowRight.classList.remove('yellow-color');
+            placeImage.src="/assets/img/new-place-1.jpg";
+            placeLocation.innerHTML="Alaska"
+            break;
+        
+        case 1: 
+            backgroundLayer.classList.add('green-color');
+            playVideo.classList.add('green-color');
+            placeDate.classList.add('green-color');
+            readMore.classList.add('green-color');
+            arrowLeft.classList.add('green-color');
+            arrowRight.classList.add('green-color');
+            placeImage.src="assets/img/new-place-3.jpg";
+            placeLocation.innerHTML="Norway";
+            break;
+        
+        case 2:
+            backgroundLayer.classList.add('yellow-color');
+            playVideo.classList.add('yellow-color');
+            placeDate.classList.add('yellow-color');
+            readMore.classList.add('yellow-color');
+            arrowLeft.classList.add('yellow-color');
+            arrowRight.classList.add('yellow-color');
+            placeImage.src="/assets/img/new-place-2.jpg";
+            placeLocation.innerHTML="Iceland";
+            break;
+
+    }
+
+
+    
+    
+}
+
+console.log(tema)
+
+
+
