@@ -161,10 +161,10 @@ body{
 }
 
 /*HEADER*/
- .header{
-     max-width: 968px;
-     margin: 0 auto;
- }
+.header{
+    max-width: 968px;
+    margin: 0 auto;
+}
 .nav{
     width: 100%;
     height: var(--header-height);
@@ -234,7 +234,6 @@ body{
     flex-direction: column;
     row-gap: 4rem;
 }
-
 
 #close-menu-icon{
     position: absolute;
@@ -327,8 +326,6 @@ body{
     align-self: flex-start; 
     z-index: var(--z-layer-2);
     overflow: var(--img-hidden);
-   
-      
 }
 
 .home__img-container{
@@ -369,6 +366,7 @@ body{
     justify-content: center;
     row-gap: 3rem;
 }
+
 .adventure__card{
     max-width: 200px;
     height: max-content;
@@ -391,6 +389,7 @@ body{
 
 #adventure-card-1{
     margin: 6rem 3rem 0 0;
+    
     .adventure__card__title{
         background: var(--pink-color);
         opacity: .6;
@@ -554,26 +553,26 @@ body{
 
 
 .places__changer{
-   width: 100%;
-   position: absolute;
-   bottom: 0;
-   padding: 0; 
-   display: flex;
-   flex-direction: row; 
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 0; 
+    display: flex;
+    flex-direction: row; 
 
-   button{
+    button{
        background-color: var(--gray-color);
        filter: brightness(1.1);
 
        &:hover{
            filter: brightness(1.6);
        }
-   }
+    }
 
-   i{
+    i{
        font-size: var(--big-font-size);
-        background: transparent;
-   }
+    background: transparent;
+    } 
 }
 
 #place-changer-left,
@@ -587,6 +586,7 @@ body{
     overflow: hidden;
     position: relative;
 }
+
 .find-talents__section-background-layer{
     width: 130%;
     height: 400px;
@@ -609,8 +609,7 @@ body{
     min-width: 335px;
     height: 500px;
     position: relative;
-    margin-bottom: 7rem;
-    
+    margin-bottom: 7rem;   
 }
 
 #iphone-layer{
@@ -709,12 +708,10 @@ body{
         font-size: var(--normal-font-size);
         color: var(--pink-color);
     }
-
 }
 
 .app__data{
     width: 50%;
-    
     display: flex;
     justify-content: center;
     margin-bottom: 10rem;
@@ -731,7 +728,6 @@ body{
     box-shadow: 5px -7px 17px 8px  rgba( 54, 54, 54, 0.1 );
     position: relative;
     z-index: var(--z-layer-3);
-
 
     img{
         width: 75px;
@@ -794,6 +790,7 @@ body{
     justify-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
+
 .footer__logo{
     font-size: var(--big-font-size);
     color: var(--red-color);
@@ -809,7 +806,6 @@ body{
     font-weight: var(--font-bold);
     padding-bottom: var(--mb-1-25);
 }
-
 
 #footer-social{
     display: flex;
@@ -990,9 +986,6 @@ body{
             font-size: 1rem;
         }
     }
-
-
-
 }
 
 @media screen and (min-width: 1200px){
