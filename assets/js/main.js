@@ -198,7 +198,3 @@ function changeTheme(){
             break;
     }   
 }
-
-
-
-
