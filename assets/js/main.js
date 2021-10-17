@@ -17,7 +17,6 @@ if(navClose){
 
 // CHANGE HOME PAGE IMAGE 
 const quant = document.getElementsByClassName('home__image'),
-      atual = 0,
       imagem = document.getElementById('default-img'),
       imagePosition = document.getElementById('img__display'),
       next = document.getElementById('img__change-right'),
@@ -25,18 +24,19 @@ const quant = document.getElementsByClassName('home__image'),
       homeTitle = document.getElementById('home-page-title');
 
 let changing = true; // Impedir que o contador troque uma imagem que acabou de ser trocada pelo botão
+let atual = 0;
 
 previous.addEventListener('click', () => {
     atual--;
-    changeImage();
-    changeText();
+    changeImage()
+    changeText()
     changing = false; // Reseta o contador;
 });
 
 next.addEventListener('click', () =>{
     atual++;
-    changeImage();
-    changeText();
+    changeImage()
+    changeText()
     changing = false; // Reseta o contador
 });
 
