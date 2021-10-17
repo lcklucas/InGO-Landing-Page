@@ -16,29 +16,28 @@ if(navClose){
 }
 
 // CHANGE HOME PAGE IMAGE 
-let quant = document.getElementsByClassName('home__image');
-let atual = 0;
-let imagem = document.getElementById('default-img');
-let imagePosition = document.getElementById('img__display')
-let next = document.getElementById('img__change-right');
-let previous = document.getElementById('img__change-left');
-let changing = true
+const quant = document.getElementsByClassName('home__image'),
+      atual = 0,
+      imagem = document.getElementById('default-img'),
+      imagePosition = document.getElementById('img__display'),
+      next = document.getElementById('img__change-right'),
+      previous = document.getElementById('img__change-left'),
+      homeTitle = document.getElementById('home-page-title');
 
-let homeTitle = document.getElementById('home-page-title');
-
+let changing = true; // Impedir que o contador troque uma imagem que acabou de ser trocada pelo botão
 
 previous.addEventListener('click', () => {
-    atual--
-    changeImage()
-    changeText()
-    changing = false
+    atual--;
+    changeImage();
+    changeText();
+    changing = false; // Reseta o contador;
 });
 
 next.addEventListener('click', () =>{
-    atual++
-    changeImage()
-    changeText()
-    changing = false
+    atual++;
+    changeImage();
+    changeText();
+    changing = false; // Reseta o contador
 });
 
 function changeImage(){
@@ -47,26 +46,26 @@ function changeImage(){
         
     }
     else if(atual < 0){
-        atual = quant.length-1
+        atual = quant.length-1;
     }
-    imagem.style.marginLeft = -100*atual+'%' 
+    imagem.style.marginLeft = -100*atual+'%';
 };
 
 function changeText(){
     switch(atual){
 
         case 0 :
-            homeTitle.innerHTML="<b>Discover</b> your adventure"
-            imagePosition.innerHTML="01"
+            homeTitle.innerHTML="<b>Discover</b> your adventure";
+            imagePosition.innerHTML="01";
             break;
         case 1 :
-            homeTitle.innerHTML="<b>Surf</b> your best wave"
-            imagePosition.innerHTML="02"
+            homeTitle.innerHTML="<b>Surf</b> your best wave";
+            imagePosition.innerHTML="02";
             break;
         
         case 2 :
-            homeTitle.innerHTML="<b>The</b> Skydiving´s rush"
-            imagePosition.innerHTML="03"
+            homeTitle.innerHTML="<b>The</b> Skydiving´s rush";
+            imagePosition.innerHTML="03";
             break;
     }
 };
@@ -93,14 +92,14 @@ function changeButtonColor(){
 
 setInterval(() =>{
     if(changing){
-    atual++ 
-    changeImage()
-    changeText()
-    changeButtonColor()
-    sr.reveal()
+    atual++;
+    changeImage();
+    changeText();
+    changeButtonColor();
+    sr.reveal();
     }
     else{
-        changing = true
+        changing = true;
     }
 }, 3000);
 
@@ -112,17 +111,17 @@ const sr = ScrollReveal({
     reset: true,
 });
 
-sr.reveal(`.adventure__card`, {
+sr.reveal(`.adventure__card, .find-talents__section-background-layer`, {
     origin: 'bottom',
     interval: 100,
 });
 
-sr.reveal(`#home-page-title`,{
+sr.reveal(`#home-page-title, .section__title`,{
     origin: 'left',
     interval: 30,
 });
 
-// CHANGE PLACES SECTION COLORS
+// CHANGE PLACES SECTION THEME COLORS
 let tema = 0;
 const playVideo = document.getElementById('play-button'),
       backgroundLayer = document.getElementById('place-color-layer'),
@@ -197,15 +196,9 @@ function changeTheme(){
             placeImage.src="/assets/img/new-place-2.jpg";
             placeLocation.innerHTML="Iceland";
             break;
-
-    }
-
-
-    
-    
+    }   
 }
 
-console.log(tema)
 
 
 
