@@ -12,5 +12,5 @@
 *O template era apenas para desktop, a adaptação para mobile foi feita por mim*
 
 ### > Utilizei o JavaScript para fazer as animações de troca de cores e imagens
-### > Utilizei uma API para os efeitos de revelação de textos ao "scrollar" a página.
+### > Utilizei uma Biblioteca para os efeitos de revelação de textos ao "scrollar" a página.
 ### > WebSite Responsível em todos os dispositivos
